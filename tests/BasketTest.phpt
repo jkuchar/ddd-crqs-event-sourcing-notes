@@ -44,7 +44,21 @@ class BasketTest extends \Tester\TestCase {
 		Assert::exception(function() use($basket) {
 			$basket->addProduct(new ProductId(Uuid::uuid4()), "Awesome product 4");
 		}, BasketLimitReached::class);
+	}
 
+	/**
+	 * Basket can have maximally 3 items at time in it
+	 */
+	public function testBasketShouldRecordAnEventForDoubleRemovedProduct() {
+		$basket = Basket::pickUp(new BasketId(Uuid::uuid4()));
+
+		$id = new ProductId(Uuid::uuid4());
+
+		$basket->addProduct($id, "Awesome product 1");
+		$basket->removeProduct($id);
+		$basket->removeProduct($id);
+
+		Assert::count(3, $basket->getRecordedEvents(), "Double removed product should not generate another event.");
 	}
 
 }
