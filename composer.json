@@ -1,0 +1,13 @@
+{
+    "name": "jkuchar1/reactphp",
+    "require": {
+        "react/react": "^0.4.2",
+        "nette/robot-loader": "^2.3"
+    },
+    "authors": [
+        {
+            "name": "Jan Kuchař",
+            "email": "honza.kuchar@grifart.cz"
+        }
+    ]
+}
