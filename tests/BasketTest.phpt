@@ -43,7 +43,7 @@ class BasketTest extends \Tester\TestCase {
 
 		Assert::exception(function() use($basket) {
 			$basket->addProduct(new ProductId(Uuid::uuid4()), "Awesome product 4");
-		}, BasketLimitReached::class, "Basket should disallow adding a fourth product.");
+		}, BasketLimitReached::class);
 
 	}
 
