@@ -6,7 +6,7 @@ final class Basket implements RecordsEvents
 	/** @var BasketId $basketId */
 	private $basketId;
 
-	private $numberOfItems = 0;
+	private $itemsCountById = [];
 
 	/**
 	 * Basket constructor.
@@ -34,21 +34,33 @@ final class Basket implements RecordsEvents
 		$this->recordThat(
 			new ProductWasAddedToBasket($this->basketId, $productId, $name)
 		);
-		$this->numberOfItems++;
+		if(!$this->isProductInBasket($productId)) {
+			$this->itemsCountById[(string)$productId] = 0;
+		}
+		$this->itemsCountById[(string)$productId]++;
 	}
 
 	public function removeProduct(ProductId $productId) {
+		if(!$this->isProductInBasket($productId)) {
+			return;
+		}
+
 		$this->recordThat(
 			new ProductWasRemovedFromBasket($this->basketId, $productId)
 		);
-		$this->numberOfItems--;
+		$this->itemsCountById[(string)$productId]--;
 	}
 
 	private function guardMaxItemsLimit()
 	{
-		if ($this->numberOfItems >= 3) {
+		$numberOfItems = array_sum($this->itemsCountById);
+		if ($numberOfItems >= 3) {
 			throw new BasketLimitReached("Cannot have more then 3 items in basket.");
 		}
+	}
+
+	private function isProductInBasket(ProductId $productId) {
+		return isset($this->itemsCountById[(string) $productId]) && ($this->itemsCountById[(string) $productId] > 0);
 	}
 
 	// -------- implementation of RecordsEvents ------------------
