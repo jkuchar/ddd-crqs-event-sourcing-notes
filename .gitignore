@@ -1,3 +1,5 @@
 /.idea
 /temp
 /vendor
+/tests/**/*.actual
+/tests/**/*.expected
