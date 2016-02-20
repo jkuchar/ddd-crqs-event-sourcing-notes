@@ -28,12 +28,17 @@ final class Basket implements RecordsEvents
 		return $basket;
 	}
 
+	// ------------- public interface --------------
 	public function addProduct(ProductId $productId, $name) {
+		// Verify invariants
 		$this->guardMaxItemsLimit();
 
+		// Produce events
 		$this->recordThat(
 			new ProductWasAddedToBasket($this->basketId, $productId, $name)
 		);
+
+		// Update internal tracked state
 		if(!$this->isProductInBasket($productId)) {
 			$this->itemsCountById[(string)$productId] = 0;
 		}
@@ -41,15 +46,21 @@ final class Basket implements RecordsEvents
 	}
 
 	public function removeProduct(ProductId $productId) {
+		// Check invariants
 		if(!$this->isProductInBasket($productId)) {
 			return;
 		}
 
+		// Produce events (optional)
 		$this->recordThat(
 			new ProductWasRemovedFromBasket($this->basketId, $productId)
 		);
+
+		// Update internal tracked state
 		$this->itemsCountById[(string)$productId]--;
 	}
+
+	// ------------ guarding helpers --------------------
 
 	private function guardMaxItemsLimit()
 	{
