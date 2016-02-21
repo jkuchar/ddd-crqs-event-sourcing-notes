@@ -61,6 +61,33 @@ class BasketTest extends \Tester\TestCase {
 		Assert::count(3, $basket->getRecordedEvents(), "Double removed product should not generate another event.");
 	}
 
+	public function testLoadBasketFromHistory() {
+		// Arrange
+		$basketId = new BasketId(Uuid::uuid4());
+		$basket = Basket::pickUp($basketId);
+		$basket->addProduct(new ProductId(Uuid::uuid4()), "Awesome product 2");
+
+		$events = $basket->getRecordedEvents();
+
+		// persist events here
+		// load events here
+
+		// Act
+		$reconstitutedBasket = Basket::reconstituteFrom(
+			new AggregateHistory($basketId, $retrievedEvents = $events)
+		);
+
+		// Assert
+
+		// When calling reconstituteFrom() it reconstructs object internal state
+		// BUT does not add events loaded from history into aggregate recorded events
+		$basket->clearRecordedEvents(); // Important!
+
+		Assert::equal($basket, $reconstitutedBasket, "Original and basket reconstructed from events should be the same");
+
+
+	}
+
 }
 
 (new BasketTest())->run();
