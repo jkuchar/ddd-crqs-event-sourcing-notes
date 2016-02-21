@@ -22,14 +22,16 @@ final class Basket implements RecordsEvents
 	 * @param \BasketId $basketId
 	 * @return \Basket
 	 */
-	public static function pickUp(BasketId $basketId) {
+	public static function pickUp(BasketId $basketId)
+	{
 		$basket = new Basket($basketId);
 		$basket->recordThat(new BasketWasPickedUp($basketId));
 		return $basket;
 	}
 
 	// ------------- public interface --------------
-	public function addProduct(ProductId $productId, $name) {
+	public function addProduct(ProductId $productId, $name)
+	{
 		// Verify invariants
 		$this->guardMaxItemsLimit();
 
@@ -45,7 +47,8 @@ final class Basket implements RecordsEvents
 		$this->itemsCountById[(string)$productId]++;
 	}
 
-	public function removeProduct(ProductId $productId) {
+	public function removeProduct(ProductId $productId)
+	{
 		// Check invariants
 		if(!$this->isProductInBasket($productId)) {
 			return;
