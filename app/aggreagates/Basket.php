@@ -1,6 +1,6 @@
 <?php
 
-final class Basket implements RecordsEvents
+final class Basket extends AbstractAggregate implements RecordsEvents
 {
 
 	/** @var BasketId $basketId */
@@ -29,6 +29,17 @@ final class Basket implements RecordsEvents
 		return $basket;
 	}
 
+	public static function reconstituteFrom(AggregateHistory $aggregateHistory)
+	{
+		$basketId = $aggregateHistory->getAggregateId();
+		$basket = new static($basketId);
+
+		foreach($aggregateHistory as $event) {
+			$basket->apply($event);
+		}
+		return $basket;
+	}
+
 	// ------------- public interface --------------
 	public function addProduct(ProductId $productId, $name)
 	{
@@ -40,11 +51,7 @@ final class Basket implements RecordsEvents
 			new ProductWasAddedToBasket($this->basketId, $productId, $name)
 		);
 
-		// Update internal tracked state
-		if(!$this->isProductInBasket($productId)) {
-			$this->itemsCountById[(string)$productId] = 0;
-		}
-		$this->itemsCountById[(string)$productId]++;
+		// Internal state NOT changed directly @see apply() method
 	}
 
 	public function removeProduct(ProductId $productId)
@@ -59,8 +66,34 @@ final class Basket implements RecordsEvents
 			new ProductWasRemovedFromBasket($this->basketId, $productId)
 		);
 
-		// Update internal tracked state
-		$this->itemsCountById[(string)$productId]--;
+		// Internal state NOT changed directly @see apply() method
+	}
+
+	// --------- object state transitions based on incoming events ---------
+
+	/**
+	 * @param \ProductWasAddedToBasket $productWasAddedToBasket
+	 */
+	public function applyProductWasAddedToBasket(ProductWasAddedToBasket $productWasAddedToBasket)
+	{
+		$productId = $productWasAddedToBasket->getProductId();
+		if (!$this->isProductInBasket($productId)) {
+			$this->itemsCountById[(string) $productId] = 0;
+		}
+		$this->itemsCountById[(string) $productId]++;
+	}
+
+	/**
+	 * @param \ProductWasRemovedFromBasket $productWasRemovedFromBasket
+	 */
+	public function applyProductWasRemovedFromBasket(ProductWasRemovedFromBasket $productWasRemovedFromBasket)
+	{
+		$productId = $productWasRemovedFromBasket->getProductId();
+		$this->itemsCountById[(string) $productId]--;
+	}
+
+	public function applyBasketWasPickedUp()
+	{
 	}
 
 	// ------------ guarding helpers --------------------
@@ -93,6 +126,7 @@ final class Basket implements RecordsEvents
 	private function recordThat(IDomainEvent $domainEvent)
 	{
 		$this->recordedEvents[] = $domainEvent;
+		$this->apply($domainEvent);
 	}
 
 }
