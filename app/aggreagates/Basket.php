@@ -123,7 +123,7 @@ final class Basket extends AbstractAggregate implements RecordsEvents
 		$this->recordedEvents = [];
 	}
 
-	private function recordThat(IDomainEvent $domainEvent)
+	private function recordThat(DomainEvent $domainEvent)
 	{
 		$this->recordedEvents[] = $domainEvent;
 		$this->apply($domainEvent);

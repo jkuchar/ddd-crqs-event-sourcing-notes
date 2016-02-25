@@ -9,6 +9,14 @@ More reading:
 - https://gist.github.com/SzymonPobiega/5220595
 - https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
 - http://subscriptions.viddler.com/GregYoung
+- http://verraes.net/2014/11/domain-events/
+ 
+Sagas
+- http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-i-of-ii/
+- http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-ii-of-ii/
+- http://blog.jonathanoliver.com/sagas-event-sourcing-and-failed-commands/
+- http://udidahan.com/2009/04/20/saga-persistence-and-event-driven-architectures/
+
 
 ## Notes / TODOs
 

@@ -11,8 +11,8 @@ class AggregateHistory extends ArrayObject {
 	{
 		$this->aggregateId = $aggregateId;
 
-		// type check for IDomainEvent[]
-		array_filter((array) $domainEvents, function(IDomainEvent $domainEvent) {});
+		// type check for DomainEvent[]
+		array_filter((array) $domainEvents, function(DomainEvent $domainEvent) {});
 
 		parent::__construct((array) $domainEvents);
 	}

@@ -1,6 +1,6 @@
 <?php
 
-class BasketWasPickedUp implements IDomainEvent
+class BasketWasPickedUp implements DomainEvent
 {
 	private $basketId;
 

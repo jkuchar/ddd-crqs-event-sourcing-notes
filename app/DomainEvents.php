@@ -7,8 +7,8 @@ class DomainEvents extends ArrayObject {
 
 	public function __construct(array $domainEvents)
 	{
-		// type check for IDomainEvent[]
-		array_filter($domainEvents, function(IDomainEvent $domainEvent) {});
+		// type check for DomainEvent[]
+		array_filter($domainEvents, function(DomainEvent $domainEvent) {});
 		parent::__construct($domainEvents);
 	}
 

@@ -4,20 +4,20 @@ abstract class AbstractAggregate
 {
 
 	/**
-	 * @param \IDomainEvent $domainEvent
+	 * @param \DomainEvent $domainEvent
 	 * @return string
 	 */
-	private function getApplyMethodForDomainEvent(IDomainEvent $domainEvent)
+	private function getApplyMethodForDomainEvent(DomainEvent $domainEvent)
 	{
 		return "apply" . get_class($domainEvent);
 	}
 
 	/**
 	 * Apply domain event if this aggregate accepts this event
-	 * @param \IDomainEvent $domainEvent
+	 * @param \DomainEvent $domainEvent
 	 * @internal
 	 */
-	public function applyIfAccepts(IDomainEvent $domainEvent) {
+	public function applyIfAccepts(DomainEvent $domainEvent) {
 		if(method_exists($this, $this->getApplyMethodForDomainEvent($domainEvent))) {
 			$this->apply($domainEvent);
 		}
@@ -25,9 +25,9 @@ abstract class AbstractAggregate
 
 	/**
 	 * Apply domain event; if objects does not accepts this event -> fail
-	 * @param \IDomainEvent $domainEvent
+	 * @param \DomainEvent $domainEvent
 	 */
-	public function apply(IDomainEvent $domainEvent) {
+	public function apply(DomainEvent $domainEvent) {
 		$method = $this->getApplyMethodForDomainEvent($domainEvent);
 		$this->$method($domainEvent);
 	}

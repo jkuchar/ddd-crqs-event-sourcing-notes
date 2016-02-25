@@ -83,7 +83,7 @@ class BasketTest extends \Tester\TestCase {
 		// BUT does not add events loaded from history into aggregate recorded events
 		$basket->clearRecordedEvents(); // Important!
 
-		Assert::equal($basket, $reconstitutedBasket, "Original and basket reconstructed from events should be the same");
+		Assert::equal($basket, $reconstitutedBasket, "Original and basket reconstructed from events should be the same.");
 
 
 	}

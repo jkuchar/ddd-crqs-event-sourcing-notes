@@ -1,6 +1,6 @@
 <?php
 
-class ProductWasAddedToBasket implements IDomainEvent
+class ProductWasAddedToBasket implements DomainEvent
 {
 	private $basketId;
 	private $productId;

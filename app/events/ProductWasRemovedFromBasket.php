@@ -1,6 +1,6 @@
 <?php
 
-class ProductWasRemovedFromBasket implements IDomainEvent
+class ProductWasRemovedFromBasket implements DomainEvent
 {
 	private $basketId;
 	private $productId;
