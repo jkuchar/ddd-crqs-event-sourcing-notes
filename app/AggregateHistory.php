@@ -1,4 +1,5 @@
 <?php
+use Ramsey\Uuid\UuidInterface;
 
 /**
  * Collection of domain events
@@ -7,7 +8,7 @@ class AggregateHistory extends ArrayObject {
 
 	private $aggregateId;
 
-	public function __construct($aggregateId, DomainEvents $domainEvents)
+	public function __construct(UuidInterface $aggregateId, DomainEvents $domainEvents)
 	{
 		$this->aggregateId = $aggregateId;
 
@@ -17,10 +18,7 @@ class AggregateHistory extends ArrayObject {
 		parent::__construct((array) $domainEvents);
 	}
 
-	/**
-	 * @return array|null|object
-	 */
-	public function getAggregateId()
+	public function getAggregateId(): UuidInterface
 	{
 		return $this->aggregateId;
 	}

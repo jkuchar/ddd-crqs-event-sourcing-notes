@@ -2,7 +2,7 @@
 
 interface RecordsEvents
 {
-	public function getRecordedEvents();
+	public function getRecordedEvents(): DomainEvents;
 
 	public function clearRecordedEvents();
 }

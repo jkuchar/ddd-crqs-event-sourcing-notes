@@ -22,17 +22,17 @@ final class Basket extends AbstractAggregate implements RecordsEvents
 	 * @param \BasketId $basketId
 	 * @return \Basket
 	 */
-	public static function pickUp(BasketId $basketId)
+	public static function pickUp(BasketId $basketId): self
 	{
 		$basket = new Basket($basketId);
 		$basket->recordThat(new BasketWasPickedUp($basketId));
 		return $basket;
 	}
 
-	public static function reconstituteFrom(AggregateHistory $aggregateHistory)
+	public static function reconstituteFrom(AggregateHistory $aggregateHistory): self
 	{
 		$basketId = $aggregateHistory->getAggregateId();
-		$basket = new static($basketId);
+		$basket = new static(new BasketId($basketId));
 
 		foreach($aggregateHistory as $event) {
 			$basket->apply($event);
@@ -106,14 +106,15 @@ final class Basket extends AbstractAggregate implements RecordsEvents
 		}
 	}
 
-	private function isProductInBasket(ProductId $productId) {
+	private function isProductInBasket(ProductId $productId): bool
+	{
 		return isset($this->itemsCountById[(string) $productId]) && ($this->itemsCountById[(string) $productId] > 0);
 	}
 
 	// -------- implementation of RecordsEvents ------------------
 	private $recordedEvents = [];
 
-	public function getRecordedEvents()
+	public function getRecordedEvents(): DomainEvents
 	{
 		return new DomainEvents($this->recordedEvents);
 	}

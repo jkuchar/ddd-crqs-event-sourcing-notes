@@ -74,7 +74,7 @@ class BasketTest extends \Tester\TestCase {
 
 		// Act
 		$reconstitutedBasket = Basket::reconstituteFrom(
-			new AggregateHistory($basketId, $retrievedEvents = $events)
+			new AggregateHistory($basketId->getId(), $retrievedEvents = $events)
 		);
 
 		// Assert

@@ -1,5 +1,7 @@
 <?php
 
+use Ramsey\Uuid\UuidInterface;
+
 class BasketWasPickedUp implements DomainEvent
 {
 	private $basketId;
@@ -13,11 +15,8 @@ class BasketWasPickedUp implements DomainEvent
 		$this->basketId = $basketId;
 	}
 
-	/**
-	 * @return \BasketId
-	 */
-	public function getAggregateId()
+	public function getAggregateId(): UuidInterface
 	{
-		return $this->basketId;
+		return $this->basketId->getId();
 	}
 }

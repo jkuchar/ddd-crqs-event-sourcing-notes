@@ -1,5 +1,7 @@
 <?php
 
+use Ramsey\Uuid\UuidInterface;
+
 abstract class AbstractId {
 
 	private $uuid;
@@ -13,11 +15,12 @@ abstract class AbstractId {
 		$this->uuid = $uuid;
 	}
 
-	function getId() {
+	function getId(): UuidInterface
+	{
 		return $this->uuid;
 	}
 
-	function __toString()
+	function __toString(): string
 	{
 		return (string) $this->uuid;
 	}

@@ -1,5 +1,7 @@
 <?php
 
+use Ramsey\Uuid\UuidInterface;
+
 class ProductWasAddedToBasket implements DomainEvent
 {
 	private $basketId;
@@ -19,23 +21,17 @@ class ProductWasAddedToBasket implements DomainEvent
 		$this->productName = $productName;
 	}
 
-	public function getAggregateId()
+	public function getAggregateId(): UuidInterface
 	{
-		return $this->basketId;
+		return $this->basketId->getId();
 	}
 
-	/**
-	 * @return BasketId
-	 */
-	public function getProductId()
+	public function getProductId(): ProductId
 	{
 		return $this->productId;
 	}
 
-	/**
-	 * @return ProductId
-	 */
-	public function getProductName()
+	public function getProductName(): string
 	{
 		return $this->productName;
 	}
