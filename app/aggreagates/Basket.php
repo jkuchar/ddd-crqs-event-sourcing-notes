@@ -100,4 +100,10 @@ final class Basket extends AbstractAggregate
 		return isset($this->itemsCountById[(string) $productId]) && ($this->itemsCountById[(string) $productId] > 0);
 	}
 
+	protected static function createInstanceForGivenHistory(AggregateHistory $aggregateHistory): EventsApplicable
+	{
+		return new self(
+			new BasketId($aggregateHistory->getAggregateId())
+		);
+	}
 }

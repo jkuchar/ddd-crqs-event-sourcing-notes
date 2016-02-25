@@ -28,18 +28,27 @@ abstract class AbstractAggregate implements RecordsEvents, EventsApplicable, Rec
 
 	// ---------------------------------------------------------------------
 
-	public static function reconstituteFrom(AggregateHistory $aggregateHistory): self
+	protected static function createInstanceForGivenHistory(AggregateHistory $aggregateHistory): EventsApplicable
 	{
-		$basketId = $aggregateHistory->getAggregateId();
-		$basket = new static(new BasketId($basketId));
+		return new static($aggregateHistory->getAggregateId());
+	}
+
+	/**
+	 * @param \AggregateHistory $aggregateHistory
+	 * @return static
+	 */
+	public static function reconstituteFrom(AggregateHistory $aggregateHistory)
+	{
+		$aggregate = static::createInstanceForGivenHistory($aggregateHistory);
 
 		foreach($aggregateHistory as $event) {
-			$basket->apply($event);
+			$aggregate->apply($event);
 		}
-		return $basket;
+		return $aggregate;
 	}
 
 	// -------- implementation of RecordsEvents ------------------
+	/** @var DomainEvent[] */
 	private $recordedEvents = [];
 
 	public function getRecordedEvents(): DomainEvents
