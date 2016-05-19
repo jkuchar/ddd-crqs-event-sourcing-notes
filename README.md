@@ -8,6 +8,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 
 - https://www.youtube.com/watch?v=whCk1Q87_ZI
 - https://www.youtube.com/watch?v=KXqrBySgX-s
+- Querying Event Streams - https://www.youtube.com/watch?v=DWhQggR13u8
 - https://gist.github.com/SzymonPobiega/5220595
 - https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
 - http://subscriptions.viddler.com/GregYoung
