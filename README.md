@@ -7,6 +7,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 ### Event Sourcing / DDD / CQRS
 
 - https://www.youtube.com/watch?v=whCk1Q87_ZI
+- https://www.youtube.com/watch?v=KXqrBySgX-s
 - https://gist.github.com/SzymonPobiega/5220595
 - https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
 - http://subscriptions.viddler.com/GregYoung
