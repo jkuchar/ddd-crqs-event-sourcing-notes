@@ -15,6 +15,11 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 - http://verraes.net/2014/11/domain-events/
 - https://www.youtube.com/watch?v=pL9XeNjy_z4
 
+### DDD in PHP
+- http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/
+- http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/
+- http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/
+
 ### Message Buses
 
 - http://getprooph.org/ (cool one!)
