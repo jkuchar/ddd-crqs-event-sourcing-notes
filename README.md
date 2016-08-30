@@ -19,6 +19,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 - http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/
 - http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/
 - http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/
+- my second sanbox: https://gitlab.grifart.cz/jkuchar1/thesis-example-application
 
 ### Message Buses
 
