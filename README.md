@@ -21,6 +21,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
   - [Making Things Clear](http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/)
   - [Basic Persistence & Testing](http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/)
 - [Jan Kuchar's second sanbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
+- [DDDinPHP](http://dddinphp.org/)
 
 ### Message Buses / libraries
 
@@ -48,6 +49,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 ### Examples
 - Mathias Verraes: [Buttercup.Protects](http://buttercup-php.github.io/protects/) is a PHP library for building Aggregates that protect business invariants, and that record Domain Events.
 - [EventSourcing at BlaBlaCar](http://blablatech.com/blog/micro-service-at-blablacar) + Matthieu Moquet: [CQRS & Event Sourcing](https://speakerdeck.com/mattketmo/cqrs-and-event-sourcing)
+- [GitHub: example applications written with CQRS/event sourcing pattern](https://github.com/dddinphp)
 
 ## Notes / TODOs
 
