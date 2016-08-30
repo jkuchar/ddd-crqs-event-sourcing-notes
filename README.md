@@ -13,6 +13,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 - [Greg Young's full and up-to-date DDD/CQRS/EventSourcing class](http://subscriptions.viddler.com/GregYoung)
 - [Mathias Verraes' elaborate on domain events](http://verraes.net/2014/11/domain-events/) - *Domain Events allow you to segregate the models of different systems*
 - [unknown's Domain Driven Design Through Onion *Architecture*](https://www.youtube.com/watch?v=pL9XeNjy_z4)
+- [CQRS.nu](http://cqrs.nu/)
 
 ### DDD in PHP
 - William Durand: DDD with Symfony2:
@@ -35,6 +36,9 @@ This project builds on example from presentation from [Mathias Verraes - Practic
   - looks like not that good architecture, feature richer
   - more like a framework then library (overkill?)
   - looks like a some's project by product
+- [Predaddy](https://github.com/szjani/predaddy)
+- [EventCentric.Core](https://github.com/event-centric/EventCentric.Core)
+- [litecqrs-php](https://github.com/beberlei/litecqrs-php)
  
 ### Process Managers / Sagas (the same thing!)
 - Jonathan Oliver: Sagas with Event Sourcing - [first part](http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-i-of-ii/), [second part](http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-ii-of-ii/)
