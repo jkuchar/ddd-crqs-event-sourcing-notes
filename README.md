@@ -6,43 +6,41 @@ This project builds on example from presentation from [Mathias Verraes - Practic
  
 ### Event Sourcing / DDD / CQRS
 
-- https://www.youtube.com/watch?v=whCk1Q87_ZI
-- https://www.youtube.com/watch?v=KXqrBySgX-s
-- Querying Event Streams - https://www.youtube.com/watch?v=DWhQggR13u8
-- https://gist.github.com/SzymonPobiega/5220595
-- https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
-- http://subscriptions.viddler.com/GregYoung
-- http://verraes.net/2014/11/domain-events/
-- https://www.youtube.com/watch?v=pL9XeNjy_z4
+- [Greg Young's Event sourcing class](https://www.youtube.com/watch?v=whCk1Q87_ZI) + [Greg Yong's CQRS documents (circa overview of course)](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- [Greg Young's hi-level overview of CQRS/DDD](https://www.youtube.com/watch?v=KXqrBySgX-s)
+- [Querying Event Streams](https://www.youtube.com/watch?v=DWhQggR13u8) (wow!)
+- [SzymonPobiega's DDD reading list](https://gist.github.com/SzymonPobiega/5220595)
+- [Greg Young's full and up-to-date DDD/CQRS/EventSourcing class](http://subscriptions.viddler.com/GregYoung)
+- [Mathias Verraes' elaborate on domain events](http://verraes.net/2014/11/domain-events/) - *Domain Events allow you to segregate the models of different systems*
+- [unknown's Domain Driven Design Through Onion *Architecture*](https://www.youtube.com/watch?v=pL9XeNjy_z4)
 
 ### DDD in PHP
-- http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/
-- http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/
-- http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/
-- my second sanbox: https://gitlab.grifart.cz/jkuchar1/thesis-example-application
+- William Durand: DDD with Symfony2: [Folder Structure And Code First](http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/); [Making Things Clear](http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/); [Basic Persistence & Testing](http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/
+- [Jan Kuchar's second sanbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
 
-### Message Buses
+### Message Buses / libraries
 
-- http://getprooph.org/ (cool one!)
+- [Prooph](http://getprooph.org/) (cool one!)
   - super flexible
+  - library: ability to mix&match
   - well designed
   - support for snapshotting
   - [ ] unfortunately does not support Sagas yet! (contribution?)
   - [ ] up-casting is strange: why it is not JIT up-cast? http://getprooph.org/event-store/upcasting.html
   - [ ] Nested transaction? http://getprooph.org/event-store-bus-bridge/transaction_manager.html
-- https://github.com/qandidate-labs/broadway
+- [broadway](https://github.com/qandidate-labs/broadway)
   - looks like not that good architecture, feature richer
-  - more like a framework then library
+  - more like a framework then library (overkill?)
+  - looks like a some's project by product
  
-### Sagas
-- http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-i-of-ii/
-- http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-ii-of-ii/
-- http://blog.jonathanoliver.com/sagas-event-sourcing-and-failed-commands/
-- http://udidahan.com/2009/04/20/saga-persistence-and-event-driven-architectures/
+### Process Managers / Sagas (the same thing!)
+- Jonathan Oliver: Sagas with Event Sourcing - [first part](http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-i-of-ii/), [second part](http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-ii-of-ii/)
+- Jonathan Oliver: [Sagas, Event Sourcing, and Failed Commands](http://blog.jonathanoliver.com/sagas-event-sourcing-and-failed-commands/)
+- Udi Dahan: [Saga Persistence and Event-Driven Architectures](http://udidahan.com/2009/04/20/saga-persistence-and-event-driven-architectures/)
 
 ### Examples
-- http://buttercup-php.github.io/protects/
-
+- Mathias Verraes: [Buttercup.Protects](http://buttercup-php.github.io/protects/) is a PHP library for building Aggregates that protect business invariants, and that record Domain Events.
+- [EventSourcing at BlaBlaCar](http://blablatech.com/blog/micro-service-at-blablacar) + Matthieu Moquet: [CQRS & Event Sourcing](https://speakerdeck.com/mattketmo/cqrs-and-event-sourcing)
 
 ## Notes / TODOs
 
@@ -53,4 +51,4 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 
 ## Case studies
 
-- https://drive.google.com/file/d/0B_enB2DMKeyzbF96VjdKdjIzOHc/view
+- [Lufthansa case study](https://drive.google.com/file/d/0B_enB2DMKeyzbF96VjdKdjIzOHc/view)
