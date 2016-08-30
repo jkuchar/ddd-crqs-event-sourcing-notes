@@ -15,7 +15,10 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 - [unknown's Domain Driven Design Through Onion *Architecture*](https://www.youtube.com/watch?v=pL9XeNjy_z4)
 
 ### DDD in PHP
-- William Durand: DDD with Symfony2: [Folder Structure And Code First](http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/); [Making Things Clear](http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/); [Basic Persistence & Testing](http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/
+- William Durand: DDD with Symfony2:
+  - [Folder Structure And Code First](http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/)
+  - [Making Things Clear](http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/)
+  - [Basic Persistence & Testing](http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/)
 - [Jan Kuchar's second sanbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
 
 ### Message Buses / libraries
