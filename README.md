@@ -14,6 +14,7 @@ This project builds on example from presentation from [Mathias Verraes - Practic
 - [Mathias Verraes' elaborate on domain events](http://verraes.net/2014/11/domain-events/) - *Domain Events allow you to segregate the models of different systems*
 - [unknown's Domain Driven Design Through Onion *Architecture*](https://www.youtube.com/watch?v=pL9XeNjy_z4)
 - [CQRS.nu](http://cqrs.nu/)
+- [DDD Community](http://dddcommunity.org/)
 
 ### DDD in PHP
 - William Durand: DDD with Symfony2:
