@@ -35,9 +35,11 @@ This project builds on example from presentation from [Mathias Verraes - Practic
   - [ ] up-casting is strange: why it is not JIT up-cast? http://getprooph.org/event-store/upcasting.html
   - [ ] Nested transaction? http://getprooph.org/event-store-bus-bridge/transaction_manager.html
 - [broadway](https://github.com/qandidate-labs/broadway)
-  - looks like not that good architecture, feature richer
+  - feature richer
+  - you have to use all (single package)
   - more like a framework then library (overkill?)
   - looks like a some's project by product
+  - experimental support for process managers
 - [Predaddy](https://github.com/szjani/predaddy)
 - [EventCentric.Core](https://github.com/event-centric/EventCentric.Core)
 - [litecqrs-php](https://github.com/beberlei/litecqrs-php)
