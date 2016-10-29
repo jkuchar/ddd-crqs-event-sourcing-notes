@@ -31,7 +31,7 @@ I've put DDD in it's own section because DDD is more analysis process then colle
 
 
 
-## Technical stuff
+# Learning the Technical Stuff
 
 This sections actually describes how people are implementing their domains discoved by using DDD. **Be careful applying patters bellow blindly.**
 
