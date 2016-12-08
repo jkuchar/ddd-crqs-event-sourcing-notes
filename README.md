@@ -81,6 +81,8 @@ Alternative implementation of domain model persistence layer which stores comple
 - [Predaddy](https://github.com/szjani/predaddy)
 - [EventCentric.Core](https://github.com/event-centric/EventCentric.Core)
 - [litecqrs-php](https://github.com/beberlei/litecqrs-php)
+- [Buttercup.Protects](http://buttercup-php.github.io/protects/) - A PHP library for building Aggregates that protect business invariants, and that record Domain Events.
+    - Nice explanation of event-sourcing principles on a richly commented simple example code.
  
 ### Process Managers / Sagas (the same thing!)
 - Jonathan Oliver: Sagas with Event Sourcing - [first part](http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-i-of-ii/), [second part](http://blog.jonathanoliver.com/cqrs-sagas-with-event-sourcing-part-ii-of-ii/)
