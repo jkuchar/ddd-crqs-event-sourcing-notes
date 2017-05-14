@@ -1,25 +1,25 @@
 # Event-Sourcing basic example app
 
-Aim: learn basics of event-sourcing pattern and its caveats.
+Aim: learn basics of event sourcing pattern and its caveats.
 
-This project builds on example from presentation from [Mathias Verraes - Practical Event Sourcing](http://verraes.net/2014/03/practical-event-sourcing/).
-
-
+This project builds on an example from the presentation from [Mathias Verraes - Practical Event Sourcing](http://verraes.net/2014/03/practical-event-sourcing/).
 
 
 
-# Learning matherial
 
-Bellow is learning matherial that I've used to dive into event DDD (and its implementations) deeper.
+
+# Learning material
+
+Bellow is learning material that I have used to dive into event DDD (and its implementations) deeper.
 
 ## DDD: Domain Driven Design
 
-I've put DDD in it's own section because DDD is more analysis process then collection of structural patterns.
+I have put DDD in its own section because DDD is more an analysis process than a collection of structural patterns.
 
 - [Jimmy Bogard: Domain Driven Design: The Good Parts](https://www.youtube.com/watch?v=U6CeaA-Phqo)
 - [Jimmy Bogard: Crafting Wicked Domain Models](https://vimeo.com/43598193)
 - [book: Eric Evans: Domain-Driven Design - Tacking Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book; read especially bounded context capture)
-  - [Eric Evans: Tackling Complexity in the Heart of Software](https://www.youtube.com/watch?v=dnUFEg68ESM) (10 years later; explains nicely how to read the book)
+  - [Eric Evans: Tackling Complexity in the Heart of Software](https://www.youtube.com/watch?v=dnUFEg68ESM) (10 years later; explains how to read his book)
 - [Greg Young: A Decade of DDD, CQRS, Event Sourcing](https://www.youtube.com/watch?v=LDW0QWie21s)
 
 ## Case studies
@@ -33,16 +33,17 @@ I've put DDD in it's own section because DDD is more analysis process then colle
 
 # Learning the Technical Stuff
 
-This sections actually describes how people are implementing their domains discoved by using DDD. **Be careful applying patters bellow blindly.**
+This section describes how people are **implementing** their domains. **Be careful. Always make sure you know why author of talk decided to do his thing that way.**
 
 ## Event Sourcing + CQRS
 
-Alternative implementation of domain model persistence layer which stores complete history of all events that happend to domain in past.
+An alternative implementation of domain model persistence layer which stores a complete history of all events that happened in the domain in the past.
+
+- [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM)
 
 - [Greg Young's Event sourcing class](https://www.youtube.com/watch?v=whCk1Q87_ZI) + [Greg Yong's CQRS documents (circa overview of course)](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 - [Greg Young's hi-level overview of CQRS/DDD](https://www.youtube.com/watch?v=KXqrBySgX-s)
 - [Querying Event Streams](https://www.youtube.com/watch?v=DWhQggR13u8) (wow!)
-- [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM)
 - [SzymonPobiega's DDD reading list](https://gist.github.com/SzymonPobiega/5220595)
 - [Greg Young's full and up-to-date DDD/CQRS/EventSourcing class](http://subscriptions.viddler.com/GregYoung)
 - [Mathias Verraes' elaborate on domain events](http://verraes.net/2014/11/domain-events/) - *Domain Events allow you to segregate the models of different systems*
@@ -51,7 +52,7 @@ Alternative implementation of domain model persistence layer which stores comple
 - [CQRS.nu](http://cqrs.nu/)
 - [DDD Community](http://dddcommunity.org/)
 
-- *Tip:* Try to watch some microservices / stream processing videos. You will see unxpected similarities.
+- *Tip:* Try to watch some microservices/stream processing videos. There are surprising similarities.
 
 ### (The structural part of) DDD in PHP
 
@@ -59,15 +60,15 @@ Alternative implementation of domain model persistence layer which stores comple
   - [Folder Structure And Code First](http://williamdurand.fr/2013/08/07/ddd-with-symfony2-folder-structure-and-code-first/)
   - [Making Things Clear](http://williamdurand.fr/2013/08/20/ddd-with-symfony2-making-things-clear/)
   - [Basic Persistence & Testing](http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/)
-- [Jan Kuchar's second sanbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
+- [Jan Kuchar's second sandbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
 - [DDDinPHP](http://dddinphp.org/)
 
 
-### Message Buses / libraries
+### Message Buses/libraries
 
 - [Prooph](http://getprooph.org/) (cool one!)
   - super flexible
-  - library: ability to mix&match
+  - library: the ability to mix&match
   - well designed
   - support for snapshotting
   - [ ] unfortunately does not support Sagas yet! (contribution?)
@@ -76,7 +77,7 @@ Alternative implementation of domain model persistence layer which stores comple
 - [broadway](https://github.com/qandidate-labs/broadway)
   - feature richer
   - you have to use all (single package)
-  - more like a framework then library (overkill?)
+  - more like a framework than library (overkill?)
   - looks like a some's project by product
   - experimental support for process managers
 - [Predaddy](https://github.com/szjani/predaddy)
@@ -97,12 +98,12 @@ Alternative implementation of domain model persistence layer which stores comple
 
 ### Notes / TODOs
 
-- [x] How to make proper relation between Product and Basket?
+- [x] How to make a proper relation between Product and Basket?
   - **Answer:** Analyse bounded contexts. (probably in most domains use two separate AggregateRoots)
 - [x] How to access product name when product-related event occurs - aggregate does not expose any state?! (should I access read model from write model?)
   - **Answer:** Access read side if needed or use heavy events.
 - [x] If aggregate produces event but it does not change state in any way, should it have empty apply() method for this event or should framework just skip this event. (this can lead into hard discoverable typo errors)
   - **Answer:** I would prefer to hot have this methods in aggregate and have some kind of static analysis check for method name and type consistency (in PHP which does not support method overloading).
-- [x] Is there any point of adding events when loading from history into object "recoded events"?
-  - **Answer:** No, if you load them there, they will be persisted once more / there will be need for merge proccess.
+- [x] Is there any point of adding events when loading from history into the object "recorded events"?
+  - **Answer:** No, if you load them there, they will be persisted once more and there will be a need for merge process.
 
