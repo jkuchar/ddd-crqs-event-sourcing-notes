@@ -8,19 +8,19 @@ This project builds on an example from the presentation from [Mathias Verraes - 
 
 
 
-# Learning material of DDD (Domain Driven Design)
+# Learning DDD (Domain Driven Design)
 
 Bellow is learning material that I have used to dive into event DDD (and its implementations) deeper.
 
-## Strategic Design
+## The Strategic Design
 
 I have put DDD in its own section because DDD is more an analysis process than a collection of structural patterns.
 
 - [Eric Evans: InfoQ: Strategic Design](https://www.infoq.com/presentations/strategic-design-evans) (Flash needed)
-- [Jimmy Bogard: Domain Driven Design: The Good Parts](https://www.youtube.com/watch?v=U6CeaA-Phqo)
-- [Jimmy Bogard: Crafting Wicked Domain Models](https://vimeo.com/43598193)
 - [book: Eric Evans: Domain-Driven Design - Tacking Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book; read especially bounded context capture)
   - [Eric Evans: Tackling Complexity in the Heart of Software](https://www.youtube.com/watch?v=dnUFEg68ESM) (10 years later; explains how to read his book)
+- [Jimmy Bogard: Domain Driven Design: The Good Parts](https://www.youtube.com/watch?v=U6CeaA-Phqo)
+- [Jimmy Bogard: Crafting Wicked Domain Models](https://vimeo.com/43598193)
 - [Greg Young: A Decade of DDD, CQRS, Event Sourcing](https://www.youtube.com/watch?v=LDW0QWie21s)
 
 ## Case studies
@@ -32,9 +32,11 @@ I have put DDD in its own section because DDD is more an analysis process than a
 
 
 
-# Learning the Technical Stuff
+# The Technical Stuff
 
 This section describes how people are **implementing** their domains. **Be careful. Always make sure you know why author of talk decided to do his thing that way.**
+
+Cannot stress enough that DDD does NOT have just a technical part. It is more style of thinking that you need to learn by shifting you mind. (see the first section of this document)
 
 ## Event Sourcing + CQRS
 
