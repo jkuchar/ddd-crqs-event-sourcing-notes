@@ -8,14 +8,15 @@ This project builds on an example from the presentation from [Mathias Verraes - 
 
 
 
-# Learning material
+# Learning material of DDD (Domain Driven Design)
 
 Bellow is learning material that I have used to dive into event DDD (and its implementations) deeper.
 
-## DDD: Domain Driven Design
+## Strategic Design
 
 I have put DDD in its own section because DDD is more an analysis process than a collection of structural patterns.
 
+- [Eric Evans: InfoQ: Strategic Design](https://www.infoq.com/presentations/strategic-design-evans) (Flash needed)
 - [Jimmy Bogard: Domain Driven Design: The Good Parts](https://www.youtube.com/watch?v=U6CeaA-Phqo)
 - [Jimmy Bogard: Crafting Wicked Domain Models](https://vimeo.com/43598193)
 - [book: Eric Evans: Domain-Driven Design - Tacking Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book; read especially bounded context capture)
