@@ -42,6 +42,7 @@ Alternative implementation of domain model persistence layer which stores comple
 - [Greg Young's Event sourcing class](https://www.youtube.com/watch?v=whCk1Q87_ZI) + [Greg Yong's CQRS documents (circa overview of course)](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 - [Greg Young's hi-level overview of CQRS/DDD](https://www.youtube.com/watch?v=KXqrBySgX-s)
 - [Querying Event Streams](https://www.youtube.com/watch?v=DWhQggR13u8) (wow!)
+- [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM)
 - [SzymonPobiega's DDD reading list](https://gist.github.com/SzymonPobiega/5220595)
 - [Greg Young's full and up-to-date DDD/CQRS/EventSourcing class](http://subscriptions.viddler.com/GregYoung)
 - [Mathias Verraes' elaborate on domain events](http://verraes.net/2014/11/domain-events/) - *Domain Events allow you to segregate the models of different systems*
