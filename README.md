@@ -38,6 +38,10 @@ This section describes how people are **implementing** their domains. **Be caref
 
 Cannot stress enough that DDD does NOT have just a technical part. It is more style of thinking that you need to learn by shifting you mind. (see the first section of this document)
 
+## Keep it simple
+
+- [Greg Young: Keynote: 8 Lines of Code](https://www.infoq.com/presentations/8-lines-code-refactoring)
+
 ## Event Sourcing + CQRS
 
 An alternative implementation of domain model persistence layer which stores a complete history of all events that happened in the domain in the past.
