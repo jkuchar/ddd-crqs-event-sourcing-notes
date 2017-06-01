@@ -18,8 +18,8 @@ I have put DDD in its own section because DDD is more an analysis process than a
 
 - [Eric Evans: InfoQ: Strategic Design](https://www.infoq.com/presentations/strategic-design-evans) (Flash needed)
 - [book: Eric Evans: Domain-Driven Design - Tacking Complexity in the Heart of Software](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book; read especially bounded context capture)
-  - [Eric Evans: Tackling Complexity in the Heart of Software](https://www.youtube.com/watch?v=dnUFEg68ESM) (10 years later; explains how to read his book) DDD Europe 2016
-  - [Eric Evans - Good Design is Imperfect Design](https://www.youtube.com/watch?v=lY54TmmEllY) (the big thing; lot of very good observations)
+  - [Eric Evans: Tackling Complexity in the Heart of Software](https://www.youtube.com/watch?v=dnUFEg68ESM) (10 years later; explains how to read his book) [DDD Europe 2016](https://www.youtube.com/playlist?list=PLf9p-N3ltMTttHHPbCJ0NpD-D50Qpam7z)
+  - [Eric Evans - Good Design is Imperfect Design](https://www.youtube.com/watch?v=lY54TmmEllY) (the big thing; lot of very good observations) [DDD Europe 2017](https://www.youtube.com/playlist?list=PLf9p-N3ltMTtAhyGupYWGVPpxUqrgsXgs)
   - [David West - The Past and Future of Domain-Driven Design](https://www.youtube.com/watch?v=XH_awPS6hK4) (How computing evolved into what it is now; very interesting)
 - [Jimmy Bogard: Domain Driven Design: The Good Parts](https://www.youtube.com/watch?v=U6CeaA-Phqo)
 - [Jimmy Bogard: Crafting Wicked Domain Models](https://vimeo.com/43598193)
