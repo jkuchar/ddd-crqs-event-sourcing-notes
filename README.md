@@ -21,6 +21,7 @@ I have put DDD in its own section because DDD is more an analysis process than a
   - [Eric Evans](https://dddeurope.com/2017/speakers/eric-evans/): [Tackling Complexity in the Heart of Software](https://www.youtube.com/watch?v=dnUFEg68ESM) (10 years later; explains how to read his book) [DDD Europe 2016](https://www.youtube.com/playlist?list=PLf9p-N3ltMTttHHPbCJ0NpD-D50Qpam7z)
   - [Eric Evans](https://dddeurope.com/2017/speakers/eric-evans/): [Good Design is Imperfect Design](https://www.youtube.com/watch?v=lY54TmmEllY) (the big thing; lot of very good observations) [DDD Europe 2017](https://www.youtube.com/playlist?list=PLf9p-N3ltMTtAhyGupYWGVPpxUqrgsXgs)
   - [David West](https://dddeurope.com/2017/speakers/david-west/): [The Past and Future of Domain-Driven Design](https://www.youtube.com/watch?v=XH_awPS6hK4) (How computing evolved into what it is now; very interesting)
+- [Greg Young: Bounded Contexts](https://www.youtube.com/watch?v=KXqrBySgX-s) (great one!)
 - [Jimmy Bogard: Domain Driven Design: The Good Parts](https://www.youtube.com/watch?v=U6CeaA-Phqo)
 - [Jimmy Bogard: Crafting Wicked Domain Models](https://vimeo.com/43598193)
 - [Greg Young: A Decade of DDD, CQRS, Event Sourcing](https://www.youtube.com/watch?v=LDW0QWie21s) DDD Europe 2016
@@ -51,7 +52,6 @@ An alternative implementation of domain model persistence layer which stores a c
 - [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM)
 
 - [Greg Young's Event sourcing class](https://www.youtube.com/watch?v=whCk1Q87_ZI) + [Greg Yong's CQRS documents (circa overview of course)](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-- [Greg Young's hi-level overview of CQRS/DDD](https://www.youtube.com/watch?v=KXqrBySgX-s)
 - [Querying Event Streams](https://www.youtube.com/watch?v=DWhQggR13u8) (wow!)
 - [SzymonPobiega's DDD reading list](https://gist.github.com/SzymonPobiega/5220595)
 - [Greg Young's full and up-to-date DDD/CQRS/EventSourcing class](http://subscriptions.viddler.com/GregYoung)
