@@ -51,6 +51,7 @@ An alternative implementation of domain model persistence layer which stores a c
 
 - [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM)
 
+- [Eric Evans Interviews Greg Young on the Architecture of a Large Transaction System](https://www.infoq.com/interviews/Architecture-Eric-Evans-Interviews-Greg-Young) (probably the first interview on event sourcing)
 - [Greg Young's Event sourcing class](https://www.youtube.com/watch?v=whCk1Q87_ZI) + [Greg Yong's CQRS documents (circa overview of course)](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 - [Querying Event Streams](https://www.youtube.com/watch?v=DWhQggR13u8) (wow!)
 - [SzymonPobiega's DDD reading list](https://gist.github.com/SzymonPobiega/5220595)
