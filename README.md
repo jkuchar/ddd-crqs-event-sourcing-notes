@@ -72,6 +72,7 @@ An alternative implementation of domain model persistence layer which stores a c
   - [Basic Persistence & Testing](http://williamdurand.fr/2013/11/13/ddd-with-symfony2-basic-persistence-and-testing/)
 - [Jan Kuchar's second sandbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
 - [DDDinPHP](http://dddinphp.org/)
+- [Cargo example in PHP from Eric Evans blue book](https://github.com/codeliner/php-ddd-cargo-sample)
 
 
 ### Message Buses/libraries
