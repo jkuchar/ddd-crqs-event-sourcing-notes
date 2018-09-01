@@ -73,6 +73,7 @@ An alternative implementation of domain model persistence layer which stores a c
 - [Jan Kuchar's second sandbox](https://gitlab.grifart.cz/jkuchar1/thesis-example-application)
 - [DDDinPHP](http://dddinphp.org/)
 - [Cargo example in PHP from Eric Evans blue book](https://github.com/codeliner/php-ddd-cargo-sample)
+- [Event Sourced Rapid Application Development](https://github.com/proophsoftware/event-machine)
 
 
 ### Message Buses/libraries
