@@ -86,6 +86,7 @@ An alternative implementation of domain model persistence layer which stores a c
   - [ ] unfortunately does not support Sagas yet! (contribution?)
   - [ ] up-casting is strange: why it is not JIT up-cast? http://getprooph.org/event-store/upcasting.html
   - [ ] Nested transaction? http://getprooph.org/event-store-bus-bridge/transaction_manager.html
+  - [Nice showcase of important things in Prooph 7](https://www.youtube.com/watch?v=QhpDIqYQzg0)
 - [broadway](https://github.com/qandidate-labs/broadway)
   - feature richer
   - you have to use all (single package)
