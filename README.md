@@ -49,20 +49,21 @@ Cannot stress enough that DDD does NOT have just a technical part. It is more st
 
 An alternative implementation of domain model persistence layer which stores a complete history of all events that happened in the domain in the past.
 
-- [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM)
-
+- [lightning talk: Mountain West Rubyconf 2010 - Alistair Cockburn - CQRS](https://www.youtube.com/watch?v=9kQ2veoeWZM) (5 mins and everything important!)
 - [Eric Evans Interviews Greg Young on the Architecture of a Large Transaction System](https://www.infoq.com/interviews/Architecture-Eric-Evans-Interviews-Greg-Young) (probably the first interview on event sourcing)
 - [Greg Young's Event sourcing class](https://www.youtube.com/watch?v=whCk1Q87_ZI) + [Greg Yong's CQRS documents (circa overview of course)](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 - [Querying Event Streams](https://www.youtube.com/watch?v=DWhQggR13u8) (wow!)
 - [SzymonPobiega's DDD reading list](https://gist.github.com/SzymonPobiega/5220595)
 - [Greg Young's full and up-to-date DDD/CQRS/EventSourcing class](http://subscriptions.viddler.com/GregYoung)
 - [Mathias Verraes' elaborate on domain events](http://verraes.net/2014/11/domain-events/) - *Domain Events allow you to segregate the models of different systems*
-- [unknown's Domain Driven Design Through Onion *Architecture*](https://www.youtube.com/watch?v=pL9XeNjy_z4)
-
-- [CQRS.nu](http://cqrs.nu/)
-- [DDD Community](http://dddcommunity.org/)
-
+- [unknown's Domain Driven Design Through Onion *Architecture*](https://www.youtube.com/watch?v=pL9XeNjy_z4)  
+- community: [CQRS.nu](http://cqrs.nu/)
+- community: [DDD Community](http://dddcommunity.org/)  
 - *Tip:* Try to watch some microservices/stream processing videos. There are surprising similarities.
+
+## Hexagonal architecture
+
+- Layers & ports and adapters - part [1](https://matthiasnoback.nl/2017/07/layers-ports-and-adapters-part-1-introduction/), [2](https://matthiasnoback.nl/2017/08/layers-ports-and-adapters-part-2-layers/) and [3](https://matthiasnoback.nl/2017/08/layers-ports-and-adapters-part-3-ports-and-adapters/)
 
 ### (The structural part of) DDD in PHP
 
