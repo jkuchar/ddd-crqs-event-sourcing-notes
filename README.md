@@ -4,7 +4,7 @@ Aim: learn basics of event sourcing pattern and its caveats.
 
 This project builds on an example from the presentation from [Mathias Verraes - Practical Event Sourcing](http://verraes.net/2014/03/practical-event-sourcing/).
 
-
+[gitlab.grifart.cz repo](https://gitlab.grifart.cz/jkuchar1/eventsourcing-cqrs-simple-app) [github mirror](https://github.com/jkuchar/ddd-crqs-event-sourcing-notes)
 
 
 
