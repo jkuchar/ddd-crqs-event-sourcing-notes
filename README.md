@@ -30,8 +30,9 @@ I have put DDD in its own section because DDD is more an analysis process than a
 
 - [Lufthansa case study](https://drive.google.com/file/d/0B_enB2DMKeyzbF96VjdKdjIzOHc/view)
 
+# Pragmatism
 
-
+- [Opening Keynote: Greg Young - Stop Over-Engenering](https://www.youtube.com/watch?v=GRr4xeMn1uU)
 
 
 
